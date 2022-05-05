@@ -1,0 +1,93 @@
+WEBPACK
+Es un empaquetador de modulos
+
+-Gestor de dependencias
+-Montar servidores de desarrollo  y pruebas
+-Cargar modulos
+-Convertir a diferentes formatos
+-Minimizar codigo
+-Compilar de SASS a CSS
+-Compilar de TS a JS
+-Nos permite trabajar con JS moderno
+ETC
+
+Cosas malas de WEBPACK
+-Es algo complicado la configuración inicial
+-Dificil de detectar problemas con algun paquete
+
+------------------html loader------------------------------
+npm install --save-dev html-loader
+(https://webpack.js.org/loaders/html-loader/)
+
+
+------------------webpack plugin------------------------------
+npm install --save-dev html-webpack-plugin
+(https://webpack.js.org/plugins/html-webpack-plugin/)
+
+
+------------------Dev server------------------------------
+ npm i -D webpack-dev-server// 
+ (https://webpack.js.org/configuration/dev-server/)
+
+ Para montar un sitio localhost, agregamos la palabra en el package.json, con la que queremos que arranque, en este caso
+ con la palabra 'start'
+
+ Para ejcutarlo solo es con el comando:
+ npm start
+
+------------------style loader-------------------------------
+injectar css en el DOM
+npm install --save-dev style-loader
+ (https://webpack.js.org/loaders/style-loader/)
+
+
+ ------------------css loader-------------------------------
+ Nos ayuda a interpretar el @import y url() yh resuleve algunos problemas
+ Adional a esto , el styel y css loader; al compilar el proyecto, coge los css y los importa creando un script y llama el css 
+ directamente en el main.js y en el HTML no hay ninguna referencia a esa hoja de estilos
+ npm install --save-dev css-loader
+ (https://webpack.js.org/loaders/css-loader/)}
+
+
+
+ NOTA IMPORTANTE
+
+ al instalar el CSSloader, StyleLoader, HTMLLoader, muy probablemente nos de un error, para solucionarlo
+ debemos agregar en el webpack.config.js una nueva regla , en la parte de module{roules}
+
+---------------------------css extract ----------------------------------------
+Este complemento extrae CSS en archivos separados. Crea un archivo CSS por archivo JS que contiene CSS. Admite la carga bajo demanda de CSS y SourceMaps.
+npm install --save-dev mini-css-extract-plugin
+ (https://webpack.js.org/plugins/mini-css-extract-plugin/)
+
+
+-------------------------------file loader--------------------------------------------------
+l file-loaderresuelve import/ require()en un archivo en una URL y emite el archivo en el directorio de salida.
+ npm install file-loader --save-dev
+(https://v4.webpack.js.org/loaders/file-loader/)
+
+
+
+--------------------------------copy-webpack-plugin---------------------------------------------------------
+Copia archivos individuales o directorios completos, que ya existen, en el directorio de compilación
+npm install copy-webpack-plugin --save-dev
+(https://webpack.js.org/plugins/copy-webpack-plugin/)
+
+--------------------------css-minimizer-webpack-plugin---------------------------------
+para optimizar y minimizar su CSS.
+npm install css-minimizer-webpack-plugin --save-dev
+(https://webpack.js.org/plugins/css-minimizer-webpack-plugin/)
+
+
+
+
+--------------------------------------terser-webpack-plugin------------------------------------------------}
+para minimizar/minimizar su JavaScript
+npm install terser-webpack-plugin --save-dev
+(https://webpack.js.org/plugins/terser-webpack-plugin/)
+
+
+-------------------------------------------Libreria babel--------------------------------------------------------------
+Es muy util cuando tenemos un codigo muy actualizado y necesitamos utilizarlo en navegadores viejos
+npm install --save-dev babel-loader @babel/core
+(https://babeljs.io/)
